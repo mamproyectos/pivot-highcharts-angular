@@ -2,13 +2,15 @@ import { Component, ViewChild } from "@angular/core";
 import { WebDataRocksPivot } from "./webdatarocks/webdatarocks.angular4";
 import * as Highcharts from "highcharts";
 
+// comentario
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  @ViewChild("pivot1") child: WebDataRocksPivot;
+  @ViewChild("pivot1", {static: false}) child: WebDataRocksPivot;
 
   public pivotReport = {
     dataSource: {
